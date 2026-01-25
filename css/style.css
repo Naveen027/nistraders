@@ -727,13 +727,14 @@ h2::after {
 }
 
 
+
 .solar-calculator {
   max-width: 1100px;
   margin: 40px auto;
   padding: 20px;
 }
 
-h1 {
+.solar-calculator h1 {
   text-align: center;
   color: #0b5ed7;
 }
