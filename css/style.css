@@ -54,7 +54,7 @@ nav {
     align-items: center;
     padding: 1rem 5%;
     z-index: 1000;
-    background: #122b42;
+    background: skyblue;
 }
 
 nav .logo {
@@ -89,10 +89,27 @@ nav.scrolled a:hover {
     color: #ffbb00;
 }
 
-/* Hero Section */
+/* ===============================
+   GLOBAL
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   SLIDER TIMING CONTROL
+================================ */
+:root {
+    --slider-duration: 5s; /* change speed here */
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
 .hero {
-    background: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=1920')
-        center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -100,36 +117,56 @@ nav.scrolled a:hover {
     text-align: center;
     color: white;
     position: relative;
-    background-position: bottom;
+    overflow: hidden;
 }
 
+/* BACKGROUND SLIDER */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    animation: heroSlider var(--slider-duration) infinite ease-in-out;
+    z-index: 0;
+    transform: scale(1);
+}
+
+/* DARK OVERLAY */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65); /* black shade */
+    background: rgba(0, 0, 0, 0.65);
     z-index: 1;
 }
 
-/* keep text above overlay */
-.hero > * {
+/* TEXT ABOVE SLIDER */
+.hero-content {
     position: relative;
     z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
+/* ===============================
+   HERO TEXT STYLES
+================================ */
 .hero-content h1 {
     font-size: 3rem;
-    max-width: 900px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
+/* ===============================
+   TYPING EFFECT
+================================ */
 .typing {
     color: #ffbb00;
     border-right: 3px solid #ffbb00;
@@ -145,13 +182,35 @@ nav.scrolled a:hover {
     100% { border-color: transparent; }
 }
 
-
-/* Responsive */
-@media (max-width:768px) {
-    nav ul {
-        gap: 1rem;
-        font-size: 0.9rem;
+/* ===============================
+   DESKTOP SLIDER ANIMATION
+================================ */
+@keyframes heroSlider {
+    0% {
+        background-image: url('https://5.imimg.com/data5/SELLER/Default/2024/2/390613638/JV/JH/FG/17910593/solar-rooftop-panel.jpg');
+        transform: scale(1);
     }
+
+    33% {
+        background-image: url('https://media.istockphoto.com/id/525206743/photo/solar-panel-on-a-red-roof.jpg?s=612x612&w=0&k=20&c=xcAkdNj8dFDhu8734FpRDAZDtN2bjr48RKEd9j2FL0U=');
+        transform: scale(1.08);
+    }
+
+    66% {
+        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/039/371/307/small/ai-generated-solar-panels-on-a-modern-tiny-house-roof-top-for-a-sustainable-future-photo.jpg');
+        transform: scale(1.08);
+    }
+
+    100% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2BQHiZ-iqYg3wVzkjQZmdyZ8Qdyd3jNmXHg&s');
+        transform: scale(1);
+    }
+}
+
+/* ===============================
+   MOBILE OPTIMIZED IMAGES
+================================ */
+@media (max-width: 768px) {
 
     .hero-content h1 {
         font-size: 2rem;
@@ -160,31 +219,30 @@ nav.scrolled a:hover {
     .hero-content p {
         font-size: 1rem;
     }
+
+    @keyframes heroSlider {
+        0% {
+            background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=70');
+            transform: scale(1);
+        }
+
+        33% {
+            background-image: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=70');
+            transform: scale(1.05);
+        }
+
+        66% {
+            background-image: url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=70');
+            transform: scale(1.05);
+        }
+
+        100% {
+            background-image: url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=70');
+            transform: scale(1);
+        }
+    }
 }
 
-section {
-    padding: 5rem 10%;
-    margin: auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #12334b;
-    font-size: 2.2rem;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background: #ffd700;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 /* ----------------------------------------------------------------------------------about--------------------- */
 .about-section {
     padding: 4rem 10%;
@@ -207,12 +265,18 @@ h2::after {
 .about-content p {
     margin-bottom: 1rem;
 }
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+    text-align: center;
+}
 
 /* -----------------------------------------------------------------------------------------Services Grid */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 5rem;
+    margin: 50px;
 }
 
 .service-card {
@@ -240,11 +304,21 @@ h2::after {
     margin-bottom: 1rem;
     color: #333;
 }
+
+.service-card img{
+    height: 150px;
+    width: 150px;
+} 
+
+.services a{
+    text-decoration: none;
+    color: #000;
+}
 /* ------------------------------------------------------------------------performace------------------------------- */
 
 .stats-section {
     padding: 3.5rem 10%;
-    background: linear-gradient(135deg, #ffbb00, #f9a602);
+    background: skyblue;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
@@ -337,7 +411,8 @@ h2::after {
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 5rem;
+    margin: 50px;
 }
 
 .product-card {
@@ -491,11 +566,16 @@ h2::after {
     box-shadow: 0 5px 15px rgba(10, 124, 99, 0.3);
 }
 
+#contact{
+    margin: 45px;
+}
+
 /* Contact Info */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 5rem;
+    margin: 45px;
     align-items: start;
 }
 
@@ -729,104 +809,75 @@ h2::after {
 
 
 
-.solar-calculator {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 20px;
+/* ---------------------------------------------label 24 year gaurantee------------------ */
+
+/* ===============================
+   24 YEAR GUARANTEE STICKY BADGE
+================================ */
+.guarantee-badge {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ffbb00, #ff9800);
+    color: #000;
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -4px 6px 18px rgba(0,0,0,0.35);
+    z-index: 999;
+    cursor: default;
+    transition: all 0.3s ease;
 }
 
-#calci  h2 {
-  text-align: center;
-  color: #0b5ed7;
+/* BIG NUMBER */
+.guarantee-badge span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
-.subtitle {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #555;
+/* HOVER EFFECT */
+.guarantee-badge:hover {
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+    transform: translateY(-50%) scale(1.05);
 }
 
-.calculator-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+/* MOBILE FRIENDLY */
+@media (max-width: 768px) {
+    .guarantee-badge {
+        font-size: 0.85rem;
+        padding: 12px 14px;
+    }
+
+    .guarantee-badge span {
+        font-size: 1.5rem;
+    }
 }
 
-.calc-form, .calc-output {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+/* PULSING GLOW EFFECT */
+.guarantee-badge {
+    animation: glowPulse 2.2s infinite ease-in-out;
 }
 
-.calc-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: 600;
-}
-
-.calc-form input, 
-.calc-form select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.tip {
-  display: block;
-  margin-top: 5px;
-  font-size: 13px;
-  color: #666;
-}
-
-button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #0b5ed7;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #094bb5;
-}
-
-.calc-output h2 {
-  margin-bottom: 20px;
-}
-
-.output-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.box {
-  background: #f1f6ff;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.box span {
-  display: block;
-  font-size: 13px;
-  color: #555;
-}
-
-.box strong {
-  font-size: 18px;
-  color: #0b5ed7;
-}
-
-@media(max-width: 900px) {
-  .calculator-grid {
-    grid-template-columns: 1fr;
-  }
+@keyframes glowPulse {
+    0% {
+        box-shadow:
+            -4px 6px 18px rgba(0,0,0,0.35),
+            0 0 0 rgba(255, 187, 0, 0);
+    }
+    50% {
+        box-shadow:
+            -6px 8px 22px rgba(0,0,0,0.45),
+            0 0 18px rgba(255, 187, 0, 0.75);
+    }
+    100% {
+        box-shadow:
+            -4px 6px 18px rgba(0,0,0,0.35),
+            0 0 0 rgba(255, 187, 0, 0);
+    }
 }

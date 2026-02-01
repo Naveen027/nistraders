@@ -13,6 +13,12 @@
 </head>
 
 <body>
+
+    <div class="guarantee-badge">
+        <span>24</span>
+        Year<br>Guarantee
+    </div>
+
     <nav>
 
         <!-- LOGO : LEFT -->
@@ -30,7 +36,7 @@
         <!-- MENU : DROPDOWN (MOBILE) -->
         <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#products">Products</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="#enquiry">Enquiry</a></li>
             <li><a href="#contact">Contact</a></li>
             <li class="call-now">
@@ -45,6 +51,9 @@
 
     <!-- ----------------------------------------Hero Section --------------------------------->
     <section class="hero">
+        <!-- Background Slider -->
+
+        <!-- Content (Constant Text) -->
         <div class="hero-content" data-aos="zoom-in">
             <h1>Welcome to <strong class="typing"></strong></h1>
             <h1>Powering Your Future with Clean, Sustainable Solar Energy</h1>
@@ -52,54 +61,40 @@
         </div>
     </section>
 
+
+
     <!-- --------------------------------------------------------------about-------------------------- -->
 
     <section id="about" class="about-section">
-        <h2 data-aos="fade-up">About NIS Traders</h2>
+        <h2 data-aos="fade-up ">About NIS Traders</h2>
 
         <div class="about-content" data-aos="fade-up" data-aos-delay="100">
             <p>
                 <strong>NIS Traders</strong>,kalaburagi,is a trusted name in solar energy solutions, committed to
                 helping
                 homes and businesses switch to clean, affordable, and reliable power.
-            </p>
 
-            <p>
                 Since our journey began, we have successfully delivered high-quality solar installations
                 across residential, commercial, and industrial segments.
-            </p>
 
-            <p>
                 We believe solar is not just an investment—it’s a long-term solution for rising electricity
                 costs and a better future for the next generation.
-            </p>
 
-            <p>
                 Our team consists of experienced engineers, trained technicians, and dedicated support staff
                 who ensure every project is executed with precision and care.
-            </p>
 
-            <p>
                 From site inspection and system design to installation and after-sales support,
                 we handle everything end-to-end so our customers stay worry-free.
-            </p>
 
-            <p>
                 We work only with MNRE-approved products and leading solar brands to guarantee
                 performance, durability, and long system life.
-            </p>
 
-            <p>
                 Transparency, honest pricing, and customer satisfaction are the core values
                 that define every project we undertake.
-            </p>
 
-            <p>
                 As an authorized regional associate and master franchise partner, we continuously
                 upgrade our technology and processes to deliver the best results.
-            </p>
 
-            <p>
                 At NIS Traders, our mission is simple — to make solar energy accessible,
                 affordable, and dependable for everyone.
             </p>
@@ -109,28 +104,30 @@
     <section id="services">
         <h2 data-aos="fade-up">Our Services</h2>
         <div class="services">
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-house-chimney-window"></i>
-                <h3>Rooftop Solar</h3>
-                <p>Expert installation from 3 kW to 10 kW+ for residential and commercial properties.</p>
-            </div>
+            <a href="products.html">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/rootop.jpg" alt="">
+                    <h3>Rooftop Solar</h3>
+                    <p>Expert installation from 3 kW to 10 kW+ for residential and commercial properties.</p>
+                </div>
+            </a>
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-plug-circle-check"></i>
+                <img src="images/offgrid.jpg" alt="" srcset="">
                 <h3>On-Grid & Off-Grid</h3>
                 <p>Battery-backed or grid-tied solutions tailored to your specific energy demands.</p>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-file-invoice-dollar"></i>
+                <img src="images/subsidy.png" alt="" srcset="">
                 <h3>Subsidy Support</h3>
                 <p>Complete guidance for PM Surya Ghar Muft Bijli Yojana & MNRE solar subsidies.</p>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <i class="fas fa-wallet"></i>
+                <img src="images/emi.webp" alt="" srcset="">
                 <h3>Easy EMI Plans</h3>
                 <p>Flexible financing options and easy bill payments for a stress-free transition.</p>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                <i class="fas fa-headset"></i>
+                <img src="images/24x7.jpg" alt="">
                 <h3>24×7 Maintenance Support</h3>
                 <p>
                     Round-the-clock support with regular maintenance to ensure
@@ -456,80 +453,8 @@
         </div>
     </section>
 
-    <!-- -------------------------------------------------------------solar calculator-------------------- -->
-
-    <section class="solar-calculator">
-        <h2 id="calci">☀️ Solar Calculator India</h2>
-        <p class="subtitle">Calculate your solar investment, savings & government subsidy</p>
-
-        <div class="calculator-grid">
-
-            <!-- INPUT FORM -->
-            <div class="calc-form">
-
-                <label>Choose Input Method</label>
-                <select id="inputMethod">
-                    <option value="bill">Monthly Electricity Bill (₹)</option>
-                    <option value="units">Monthly Consumption (kWh)</option>
-                    <option value="area">Rooftop Area (sq ft)</option>
-                </select>
-
-                <label id="dynamicLabel">Monthly Electricity Bill (₹)</label>
-                <input type="number" id="inputValue" placeholder="Enter value">
-
-                <small class="tip">💡 Tip: 1 kW requires ~100 sq ft & generates ~4.5 units/day</small>
-
-                <label>State</label>
-                <select id="state">
-                    <option value="">Select State</option>
-                    <option value="KA">Karnataka</option>
-                    <option value="MH">Maharashtra</option>
-                    <option value="TN">Tamil Nadu</option>
-                    <option value="DL">Delhi</option>
-                    <option value="GJ">Gujarat</option>
-                    <option value="RJ">Rajasthan</option>
-                </select>
-
-                <label>City</label>
-                <input type="text" placeholder="Enter city">
-
-                <label>Electricity Rate (₹/kWh)</label>
-                <input type="number" id="rate" readonly>
 
 
-                <label>Installation Type</label>
-                <select id="type">
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                </select>
-
-                <label>Roof Type</label>
-                <select id="roof">
-                    <option value="rcc">RCC Concrete</option>
-                    <option value="metal">Metal Sheet</option>
-                </select>
-
-                <button onclick="calculateSolar()">Calculate</button>
-            </div>
-
-            <!-- OUTPUT -->
-            <div class="calc-output">
-                <h2>📊 Solar System Analysis</h2>
-
-                <div class="output-grid">
-                    <div class="box"><span>System Size</span><strong id="sysSize">-</strong></div>
-                    <div class="box"><span>Estimated Cost</span><strong id="cost">-</strong></div>
-                    <div class="box"><span>Government Subsidy</span><strong id="subsidy">-</strong></div>
-                    <div class="box"><span>Net Cost</span><strong id="netCost">-</strong></div>
-                    <div class="box"><span>Annual Production</span><strong id="production">-</strong></div>
-                    <div class="box"><span>Annual Savings</span><strong id="savings">-</strong></div>
-                    <div class="box"><span>Payback Period</span><strong id="payback">-</strong></div>
-                    <div class="box"><span>CO₂ Saved / Year</span><strong id="co2">-</strong></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
     <!-- ----------------------------------------------------------------------------contact form------------------ -->
     <section id="contact">
         <h2 data-aos="fade-up">Contact Details</h2>
@@ -605,10 +530,11 @@
 
             <hr>
             <p>© 2026 NIS Traders. All Rights Reserved.</p>
+            <p>Designed and Developed by Naveen Bellad</p>
         </div>
     </footer>
 
-
+    <!-- -----------------------------------------------------------------------------javascript------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
