@@ -54,7 +54,7 @@ nav {
     align-items: center;
     padding: 1rem 5%;
     z-index: 1000;
-    background: skyblue;
+    background: #1ca0d6;
 }
 
 nav .logo {
@@ -318,7 +318,7 @@ nav.scrolled a:hover {
 
 .stats-section {
     padding: 3.5rem 10%;
-    background: skyblue;
+    background: #1ca0d6;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
