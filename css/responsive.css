@@ -34,9 +34,10 @@
 
     /* Logo LEFT */
     .logo img {
-        height: 65px;
-        width: 80px;
+        height: 50px;
+        width: 60px;
         display: block;
+        margin: 0px;
     }
 
     /* Hamburger RIGHT */
@@ -53,7 +54,7 @@
     .hamburger span {
         height: 3px;
         width: 100%;
-        background: #fff;
+        background: #ffffff;
         border-radius: 3px;
         transition: 0.3s ease;
     }
@@ -72,6 +73,9 @@
     }
 
     /* Mobile Menu */
+    nav{
+        height: 80px;
+    }
     nav ul {
         position: absolute;
         top: 72px;
@@ -101,11 +105,41 @@
     .call-now {
         margin-top: 0.5rem;
     }
-
+    
     /* Menu links */
     nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 1rem;
+    }
+
+    .guarantee-badge {
+        position: fixed;
+        height: 110px;
+        width: 100px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(135deg, #ffbb00, #ff9800);
+        color: #000;
+        padding: 14px 18px;
+        /* font-weight: 600; */
+        font-size: 0.95rem;
+        text-align: center;
+        border-radius: 10px 0 0 10px;
+        box-shadow: -4px 6px 18px rgba(0, 0, 0, 0.35);
+        z-index: 999;
+        cursor: default;
+        transition: all 0.3s ease;
+    }
+
+    /* BIG NUMBER */
+    .guarantee-badge span {
+        display: block;
+        /* font-size: 1.8rem; */
+        font-size: 15px;
+        font-weight: bold;
+        /* font-weight: 800; */
+        line-height: 1;
     }
 }

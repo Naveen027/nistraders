@@ -8,6 +8,9 @@
 body {
   background: #f4f7fa;
 }
+nav{
+  background-color: skyblue !important;
+}
 
 .products-section {
   padding: 60px 8%;
@@ -93,9 +96,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  
+  .nav{
+    height: 70px !important;
+  }
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .products-section{
+    padding-top: 100px;
+  }
+  .hamburger span {
+        height: 3px;
+        width: 100%;
+        background: #000000;
+        border-radius: 3px;
+        transition: 0.3s ease;
+    }
 }
 
 @media (max-width: 480px) {
