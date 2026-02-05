@@ -73,9 +73,10 @@
     }
 
     /* Mobile Menu */
-    nav{
+    nav {
         height: 80px;
     }
+
     nav ul {
         position: absolute;
         top: 72px;
@@ -105,7 +106,7 @@
     .call-now {
         margin-top: 0.5rem;
     }
-    
+
     /* Menu links */
     nav ul li a {
         color: white;
@@ -141,5 +142,18 @@
         font-weight: bold;
         /* font-weight: 800; */
         line-height: 1;
+    }
+
+    /* -------------------------------------------------------------district wise----------------------------------- */
+    .district-container {
+        padding: 25px 20px;
+    }
+
+    .district-container h2 {
+        font-size: 22px;
+    }
+
+    .district-container p {
+        font-size: 15px;
     }
 }
