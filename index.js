@@ -1,3 +1,20 @@
+
+  // Show popup on page load
+  window.addEventListener("load", function () {
+    const popup = document.getElementById("districtPopup");
+    if (popup) {
+      popup.style.display = "flex";
+    }
+  });
+
+  // Close popup
+  function closePopup() {
+    const popup = document.getElementById("districtPopup");
+    if (popup) {
+      popup.style.display = "none";
+    }
+  }
+
 function toggleMenu(btn) {
   const menu = document.querySelector("nav ul");
   menu.classList.toggle("show");
