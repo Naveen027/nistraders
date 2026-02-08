@@ -29,6 +29,7 @@
 
     .contact-grid {
         grid-template-columns: 1fr;
+        margin: 10px;
 
     }
 
@@ -156,6 +157,24 @@
     }
 
     .district-container p {
+        font-size: 15px;
+    }
+
+    /* -------------------------------------------------------how electricity will reduce--------------- */
+
+    .solar-savings-section {
+        padding: 50px 15px;
+    }
+
+    .solar-heading {
+        font-size: 22px;
+    }
+
+    .solar-text {
+        font-size: 15px;
+    }
+
+    .solar-text .highlight {
         font-size: 15px;
     }
 }
