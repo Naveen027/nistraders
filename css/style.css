@@ -572,6 +572,10 @@ nav.scrolled a:hover {
     margin: 45px;
 }
 
+#contact p{
+    text-align: justify;
+}
+
 /* Contact Info */
 .contact-grid {
     display: grid;
