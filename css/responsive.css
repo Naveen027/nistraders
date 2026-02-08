@@ -39,6 +39,21 @@
         width: 60px;
         display: block;
         margin: 0px;
+        border-radius: 10px;
+    }
+
+    .logo {
+        display: flex;
+        gap: 0px;
+        line-height: 1;
+    }
+
+    .brand h2 {
+        font-size: 17px;
+    }
+
+    .brand .tagline {
+        font-size: 7px;
     }
 
     /* Hamburger RIGHT */
@@ -76,6 +91,11 @@
     /* Mobile Menu */
     nav {
         height: 80px;
+        background: #ffffff42;
+        width: 330px;
+        margin: 5px;
+        border-radius: 10px;
+        padding: 7px;
     }
 
     nav ul {
@@ -116,13 +136,16 @@
         text-decoration: none;
         font-size: 1rem;
     }
-    .nav-menu li i{
+
+    .nav-menu li i {
         display: inline;
     }
-    .services{
+
+    .services {
         gap: 1rem;
     }
-    .service-card{
+
+    .service-card {
         padding: 1rem;
     }
 
