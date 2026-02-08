@@ -29,14 +29,14 @@ document.querySelectorAll("nav ul li a").forEach(link => {
   });
 });
 
-const slides = document.querySelectorAll(".hero-slider .slide");
-    let current = 0;
+// const slides = document.querySelectorAll(".hero-slider .slide");
+//     let current = 0;
 
-    setInterval(() => {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-    }, 1000);
+//     setInterval(() => {
+//         slides[current].classList.remove("active");
+//         current = (current + 1) % slides.length;
+//         slides[current].classList.add("active");
+//     }, 1000);
 
 
 const cards = document.querySelectorAll('.testimonial-card');
