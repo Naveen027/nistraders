@@ -1094,7 +1094,8 @@ nav.scrolled a:hover {
 
 
 
-.nav-menu li a:hover {
-  color: #f57c00;
+.nav-menu li i {
+  /* color: #f57c00; */
+  display: none;
 }
 
