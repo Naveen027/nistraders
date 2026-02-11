@@ -130,7 +130,7 @@ nav.scrolled a:hover {
    HERO SECTION
 ================================ */
 .hero {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,6 +226,17 @@ nav.scrolled a:hover {
         transform: scale(1);
     }
 }
+
+#blink {
+  animation: fade-blink 1.2s ease-in-out infinite;
+  color: #ffbb00;
+}
+
+@keyframes fade-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 /* ===============================
    MOBILE OPTIMIZED IMAGES
@@ -586,6 +597,108 @@ nav.scrolled a:hover {
     background: #12334b;
     box-shadow: 0 5px 15px rgba(10, 124, 99, 0.3);
 }
+
+/* --------------------------------------------------------------------calculator----------------------------- */
+.solar-calculator {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+#calci{
+    text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.calc-form, .calc-output {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.calc-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.calc-form input, 
+.calc-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.tip {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #0b5ed7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #094bb5;
+}
+
+.calc-output h2 {
+  margin-bottom: 20px;
+}
+
+.output-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.box {
+  background: #f1f6ff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.box span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+}
+
+.box strong {
+  font-size: 18px;
+  color: #0b5ed7;
+}
+
+@media(max-width: 900px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* --------------------------------------------------------------contact------------------------------------------ */
 
 #contact{
     margin: 45px;

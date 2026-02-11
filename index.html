@@ -158,6 +158,11 @@
             <h1>Welcome to <strong class="typing"></strong></h1>
             <h1>Powering Your Future with Clean, Sustainable Solar Energy</h1>
             <p>Authorized Regional Associate for Solar Installations & Services</p>
+            <p id="blink">“Cut your electricity bills by 30–50% with NIS Solar Energy🌞”</p>
+            <a href="#calculator">
+                <button class="save-btn">Calculate Savings</button>
+            </a>
+
         </div>
     </section>
 
@@ -532,7 +537,8 @@
     <!-- -------------------------------------------------------------------------------APN franchise----------------- -->
     <section class="franchise-slider-section">
         <h2>New Master Franchise Announcement </h2>
-        <p class="subtitle"><strong>APN Solar</strong> is now officially available at <strong>NIS SOLAR ENERGY</strong></p>
+        <p class="subtitle"><strong>APN Solar</strong> is now officially available at <strong>NIS SOLAR ENERGY</strong>
+        </p>
 
         <div class="auto-slider">
             <img src="images/s1.jpeg" class="active">
@@ -543,7 +549,7 @@
         </div>
 
         <p class="franchise-note">
-            NIS  SOLAR ENERGY is proud to announce its appointment as
+            NIS SOLAR ENERGY is proud to announce its appointment as
             <strong>Master Franchise of APN Solar</strong>.
         </p>
     </section>
@@ -629,6 +635,88 @@
         </div>
     </section>
 
+    <!-- -----------------------------------------------------------calculator----------------------------------- -->
+    <section class="solar-calculator" id="calculator">
+        <h2 id="calci">☀️ Solar Calculator India</h2>
+        <p class="subtitle">Calculate your solar investment, savings & government subsidy</p>
+
+        <div class="calculator-grid">
+
+            <!-- INPUT FORM -->
+            <div class="calc-form">
+
+                <label>Choose Input Method</label>
+                <select id="inputMethod">
+                    <option value="bill">Monthly Electricity Bill (₹)</option>
+                    <option value="units">Monthly Consumption (kWh)</option>
+                    <option value="area">Rooftop Area (sq ft)</option>
+                </select>
+
+                <label id="dynamicLabel">Monthly Electricity Bill (₹)</label>
+                <input type="number" id="inputValue" placeholder="Enter value">
+
+                <small class="tip">💡 Tip: 1 kW requires ~100 sq ft & generates ~4.5 units/day</small>
+
+                <label>State</label>
+                <select id="state">
+                    <option value="">Select State</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="RJ">Rajasthan</option>
+                </select>
+
+                <label>Select System Size</label>
+                <select id="manualSize">
+                    <option value="">Auto Calculate</option>
+                    <option value="1">1 kW</option>
+                    <option value="2">2 kW</option>
+                    <option value="3">3 kW</option>
+                    <option value="4">Above 3 kW</option>
+                </select>
+
+                <label>City</label>
+                <input type="text" placeholder="Enter city">
+
+                <label>Electricity Rate (₹/kWh)</label>
+                <input type="number" id="rate" readonly>
+
+
+                <label>Installation Type</label>
+                <select id="type">
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+
+                <label>Roof Type</label>
+                <select id="roof">
+                    <option value="rcc">RCC Concrete</option>
+                    <option value="metal">Metal Sheet</option>
+                </select>
+
+                <button onclick="calculateSolar()">Calculate</button>
+            </div>
+
+            <!-- OUTPUT -->
+            <div class="calc-output">
+                <h2>📊 Solar System Analysis</h2>
+
+                <div class="output-grid">
+                    <div class="box"><span>System Size</span><strong id="sysSize">-</strong></div>
+                    <div class="box"><span>Estimated Cost</span><strong id="cost">-</strong></div>
+                    <div class="box"><span>Government Subsidy</span><strong id="subsidy">-</strong></div>
+                    <div class="box"><span>Net Cost</span><strong id="netCost">-</strong></div>
+                    <div class="box"><span>Annual Production</span><strong id="production">-</strong></div>
+                    <div class="box"><span>Annual Savings</span><strong id="savings">-</strong></div>
+                    <div class="box"><span>Payback Period</span><strong id="payback">-</strong></div>
+                    <div class="box"><span>CO₂ Saved / Year</span><strong id="co2">-</strong></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
     <!-- ----------------------------------------------------------------------------contact form------------------ -->
