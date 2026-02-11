@@ -1,4 +1,12 @@
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    document.getElementById("flyerModal").classList.add("show");
+  }, 5000);
+});
 
+function closeFlyer() {
+  document.getElementById("flyerModal").classList.remove("show");
+}
   //----------------------------------------------------------------------- Show popup on page load
   window.addEventListener("load", function () {
     const popup = document.getElementById("districtPopup");

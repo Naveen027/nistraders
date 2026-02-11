@@ -230,6 +230,9 @@ nav.scrolled a:hover {
 #blink {
   animation: fade-blink 1.2s ease-in-out infinite;
   color: #ffbb00;
+  font-weight: 600; /* slightly bold */
+  text-shadow: 0 0 6px rgba(255, 187, 0, 0.7),
+               0 0 12px rgba(255, 187, 0, 0.4);
 }
 
 @keyframes fade-blink {
@@ -1229,5 +1232,68 @@ button:hover {
 .nav-menu li i {
   /* color: #f57c00; */
   display: none;
+}
+
+
+/* ----------------------------------------------------------------------banner------------------------- */
+.flyer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.flyer-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.flyer-box {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 400px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: flyerFade 0.3s ease;
+}
+
+.flyer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.flyer-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+.flyer-close:hover {
+  color: red;
+}
+
+@keyframes flyerFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Mobile adjustment */
+@media (max-width: 480px) {
+  .flyer-box {
+    width: 95%;
+  }
 }
 
