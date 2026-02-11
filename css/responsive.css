@@ -89,15 +89,18 @@
     }
 
     /* Mobile Menu */
- nav {
-    height: 80px;
-    background: #ffffff42;
-    width: 99%;
-    margin: 2px;              /* fill available screen */      
-    border-radius: 10px;
-    padding: 7px;
-    box-sizing: border-box;   /* important */
-}
+    nav {
+        height: 80px;
+        background: #ffffff42;
+        width: 99%;
+        margin: 2px;
+        /* fill available screen */
+        border-radius: 10px;
+        padding: 7px;
+        box-sizing: border-box;
+        /* important */
+    }
+
     nav ul {
         position: absolute;
         top: 72px;
@@ -151,8 +154,8 @@
 
     .guarantee-badge {
         position: fixed;
-        height: 110px;
-        width: 100px;
+        height: 100px;
+        width: 80px;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -173,7 +176,7 @@
     .guarantee-badge span {
         display: block;
         /* font-size: 1.8rem; */
-        font-size: 15px;
+        font-size: 12px;
         font-weight: bold;
         /* font-weight: 800; */
         line-height: 1;

@@ -62,7 +62,7 @@
             <img src="images/banner.png" alt="Solar Offer" class="flyer-image">
         </div>
     </div>
-<!-- ------------------------------------------------------------------popup-------------------------- -->
+    <!-- ------------------------------------------------------------------popup-------------------------- -->
     <div id="districtPopup" class="popup-overlay">
         <div class="popup-box">
             <span class="popup-close" onclick="closePopup()">&times;</span>
@@ -93,10 +93,10 @@
 
 
     <div class="guarantee-badge">
-        <span>24 Year warrenty</span><br>
+        <span>24 Year warranty</span><br>
         <span>1 Year guarantee</span>
     </div>
-<!-- ------------------------------------------------------------------------------navbar------------------------------- -->
+    <!-- ------------------------------------------------------------------------------navbar------------------------------- -->
     <nav>
 
         <!-- LOGO : LEFT -->
@@ -166,7 +166,22 @@
             <h1>Welcome to <strong class="typing"></strong></h1>
             <h1>Powering Your Future with Clean, Sustainable Solar Energy</h1>
             <p>Authorized Regional Associate for Solar Installations & Services</p>
-            <p id="blink">“Cut your electricity bills by 30–50% with NIS Solar Energy🌞”</p>
+
+
+            <button id="subsidyBtn">Govt Subsidy Available</button>
+            <div id="subsidyModal">
+                <div id="subsidyContent">
+                    <span id="closeBtn">&times;</span>
+                    <h2>PM-SURYA GHAR: MUFT BIJLI YOJANA</h2>
+                    <p><strong>SUBSIDY FOR RESIDENTIAL HOUSEHOLDS</strong></p>
+                    <ul>
+                        <li>Rs. 30,000/- for 1kW system</li>
+                        <li>Rs. 60,000/- for 2kW system</li>
+                        <li>✔ Rs. 78,000/- for 3kW system or Higher</li>
+                    </ul>
+                </div>
+            </div>
+
             <a href="#calculator">
                 <button class="save-btn">Calculate Savings</button>
             </a>
@@ -808,6 +823,16 @@
 
     <!-- -----------------------------------------------------------------------------javascript------------------- -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        const modal = document.getElementById("subsidyModal");
+        const btn = document.getElementById("subsidyBtn");
+        const close = document.getElementById("closeBtn");
+
+        btn.onclick = () => modal.style.display = "block";
+        close.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+    </script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
