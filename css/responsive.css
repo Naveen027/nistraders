@@ -212,4 +212,22 @@
     .solar-text .highlight {
         font-size: 15px;
     }
+
+    .solarpulse-modal {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .solarpulse-content h2 {
+        font-size: 18px;
+    }
+
+    .solarpulse-content p {
+        font-size: 14px;
+    }
+
+    .solarpulse-ok {
+        width: 100%;
+        padding: 12px;
+    }
 }

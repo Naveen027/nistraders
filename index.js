@@ -22,6 +22,8 @@ function closeFlyer() {
       popup.style.display = "none";
     }
   }
+// ---------------------------------------------------------------------------solar benefits popup----------------------
+  
 // -----------------------------------------------------------------------hamburger----------------------------------------
 function toggleMenu(btn) {
   const menu = document.querySelector("nav ul");
