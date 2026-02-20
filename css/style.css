@@ -784,16 +784,15 @@ button:hover {
     font-size: 1.5rem;
 }
 
-/* Footer with Video Background */
+/* -------------------------------------------------------------Footer with Video Background ---------------------------*/
 .video-footer {
     position: relative;
     overflow: hidden;
     color: white;
-    padding: 3rem 10% 2rem;
-    text-align: center;
+    padding: 4rem 10% 2rem;
 }
 
-/* Video */
+/* Background Video */
 .footer-video {
     position: absolute;
     top: 50%;
@@ -805,43 +804,103 @@ button:hover {
     z-index: 1;
 }
 
-/* Black shade overlay */
+/* Dark overlay */
 .footer-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7); /* adjust darkness here */
+    background: rgba(0, 0, 0, 0.75);
     z-index: 2;
 }
 
-/* Footer content above video */
+/* Content */
 .footer-content {
     position: relative;
     z-index: 3;
 }
 
-/* Social Icons */
-.video-footer .social-icons {
-    margin: 1rem 0;
+/* Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
-.video-footer .social-icons a {
-    color: white;
-    margin: 0 1rem;
-    font-size: 1.8rem;
-    transition: 0.3s;
-}
-
-.video-footer .social-icons a:hover {
+/* Columns */
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
     color: #ffd700;
 }
 
+.footer-column a {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #ffd700;
+    transform: translateX(4px);
+}
+
+/* Brand */
+.footer-column.brand .logo {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-column.brand p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Contact text */
+.footer-column p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* Divider */
 .video-footer hr {
     border: 0;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    margin: 2rem 0 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 1.5rem 0;
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
+/* ------------------------------------------------------------------------------------------------------------------- */
 
 .solar-panels {
     padding: 80px 5%;
